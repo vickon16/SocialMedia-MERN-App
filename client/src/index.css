@@ -1,0 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,300italic,regular,italic,500,500italic,700,700italic);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+* {
+  margin: 0 ;
+  padding: 0 ;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+input:-webkit-autofill, 
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus-within,
+input:-webkit-autofill:active, 
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+}
+
+.flex_center {
+  @apply flex justify-center items-center;
+}
+
+.flex_start {
+  @apply flex justify-start items-start;
+}
+
+.flex_end {
+  @apply flex justify-end items-end;
+}
+
+.flex_between {
+  @apply flex justify-between items-center;
+}
+
+
+
+.custom-gradient {
+  @apply bg-gradient-to-l from-customGradient1 to-customGradient2 hover:from-customGradient2 hover:to-customGradient1
+}
+
+.webname {
+  @apply custom-gradient bg-clip-text text-transparent  bg-cover bg-repeat
+}
+
+.custom-blur {
+  @apply absolute w-[22rem] h-[14rem] rounded-full bg-bgBlur blur-[72px]
+}
+
+.btn {
+  @apply flex items-center justify-center text-white rounded transition-all duration-200 ease-in-out cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed
+}
+
+.btn-gradient {
+  @apply btn custom-gradient
+}
+
+.btn-outline {
+  @apply flex items-center justify-center rounded transition-all duration-200 ease-in-out cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed font-bold text-customGradient2 border border-customGradient2 hover:opacity-70
+}
+
+.input {
+  @apply outline-none border border-gray-300/60 w-full rounded bg-transparent
+}
+
+.input-style {
+  @apply input p-3 
+}
+
+.svg-style {
+  @apply text-xl font-bold cursor-pointer hover:fill-customGradient2 active:fill-customGradient2 transition-colors duration-200 ease-in-out
+}
+
+.active-liked {
+  @apply fill-customGradient2
+}
+
+
+
